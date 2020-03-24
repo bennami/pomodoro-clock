@@ -1,18 +1,18 @@
 import React from"react";
 
-function Timer() {
+
+
+function Timer(props) {
 
     return(
-        <div className={"timer"}>
+        <div className={"Timer"}>
             <div>
-               <p>
-                   <span>00</span>
-                   <span>:</span>
-                   <span>00</span>
-               </p>
-
+                <span>{props.Minutes}</span>
+                <span>:</span>
+                <span>{props.Seconds}</span>
             </div>
         </div>
     );
 }
+
 export default Timer;
