@@ -22,8 +22,13 @@ function App() {
     };
 
     const  addSec =()=>{
-        //if < 0 stop -1
-        setSec (startSeconds   - 1  )
+
+        let seconds;
+        seconds =  setSec (startSeconds -- );
+        // eslint-disable-next-line no-unused-expressions
+         seconds <= 0 ? 59 : seconds -- ;
+
+        increment();
 
     };
 
@@ -46,7 +51,7 @@ function App() {
 
         <button onClick={addMinute}>add Minute</button>
         <button onClick={minMinute}>Min minute</button>
-        <button onClick={increment}>start</button>
+        <button onClick={addSec}>start</button>
         <button onClick={stopIncrement}>stop</button>
 
     </div>
