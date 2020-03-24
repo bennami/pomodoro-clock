@@ -8,8 +8,8 @@ import '../App.css';
 
 function App() {
 
-    const[startMinutes,  setMinute]  = useState(25);
-    const [startSeconds,  setSec]  = useState(0);
+    const[startMinutes,  setMinute]  = useState(`25`);
+    const [startSeconds,  setSec]  = useState(`00`);
 
     // add minutes
     const  addMinute =()=>{
@@ -18,13 +18,13 @@ function App() {
 
     const  minMinute =()=>{
         //if < 0 stop -1
-        setMinute (startMinutes <= 0 ? 0 :  startMinutes -1 )
+        setMinute (startMinutes <= `00` ? `00` :  startMinutes -1  )
     };
 
     const  minSec =()=>
     {
         // count down seconds, when seconds = 00 -> 59 && minute -1
-        setSec (startSeconds  === 60 ? setMinute(startMinutes -1) : startSeconds -1);
+        setSec (startSeconds  === `60` ? setMinute(startMinutes -1) : startSeconds -1 && startSeconds === `00` && `0`? `59`: startSeconds -1);
 
     };
 
